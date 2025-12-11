@@ -9,9 +9,10 @@ const { processAgentFile, normalizeUploadedFiles } = require('./agentFileProcess
  */
 async function processAgentDocuments(agentRow) {
   if (!agentRow) {
-    console.warn('[DOCUMENT-PROCESSOR] Missing agent data, skipping processing');
+    console.warn('[DOCUMENT-PROCESSOR] .Missing agent data, skipping processing');
     return;
-  }
+  } 
+
 
   const agentId = agentRow.id;
   const uploadedFiles = normalizeUploadedFiles(agentRow.uploaded_files);
